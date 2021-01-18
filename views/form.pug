@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div.row
+    include stock
+    include synthesis-items
+    div.col
+      h2 Remaining Items Needed
+      hr
+      h3 Shards
+      div.form-group.row
+        label.col-sm-2.col-form-label.col-form-label-sm(for="email") Email:
+        div.col-sm-10
+          input.form-control.formcontrol-sm(
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+          )
+      input(type="submit" value="Calculate" class="btn btn-lg btn-primary")
+
+    
