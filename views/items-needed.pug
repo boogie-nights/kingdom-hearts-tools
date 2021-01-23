@@ -1,0 +1,13 @@
+mixin list-item(name, count)
+    li.list-group-item.d-flex.justify-content-between.align-items-center= name
+      span.badge.badge-primary.badge-pill= count
+
+div.col
+  h2 Remaining Items Needed
+  hr
+  h3 Shards
+  ul.list-group
+    +list-item('Blaze Shard', 5)
+    +list-item('Bright Shard', 5)
+
+  input(type="submit" value="Calculate" class="btn btn-lg btn-primary")

@@ -1,87 +1,31 @@
+mixin stock-item(name, formattedName)
+  div.form-group.row
+    label.col-sm-4.col-form-label.col-form-label(for=formattedName+"Quantity")= name
+    div.col-sm-6
+      input.form-control.formcontrol(
+        type="number"
+        id=formattedName+"Quantity"
+        name=formattedName+"Quantity"
+        class="form-control"
+       )
 block stock    
   div.col
     h2 Stock
     hr
     h3 Shards
-    div.form-group.row
-      label.col-sm-4.col-form-label.col-form-label(for="blaze-shard-quantity") Blaze Shard
-      div.col-sm-6
-        input.form-control.formcontrol(
-          type="number"
-          id="blaze-shard-quantity"
-          name="blaze-shard-quantity"
-          class="form-control"
-        )
-    div.form-group.row
-      label.col-sm-4.col-form-label.col-form-label(for="bright-shard-quantity") Bright Shard
-      div.col-sm-6
-        input.form-control.formcontrol(
-          type="number"
-          id="bright-shard-quantity"
-          name="bright-shard-quantity"
-          class="form-control"
-        )
-    div.form-group.row
-      label.col-sm-4.col-form-label.col-form-label(for="frost-shard-quantity") Frost Shard
-      div.col-sm-6
-        input.form-control.formcontrol(
-          type="number"
-          id="frost-shard-quantity"
-          name="frost-shard-quantity"
-          class="form-control"
-        )
-    div.form-group.row
-      label.col-sm-4.col-form-label.col-form-label(for="Lucid-shard-quantity") Lucid Shard
-      div.col-sm-6
-        input.form-control.formcontrol(
-          type="number"
-          id="lucid-shard-quantity"
-          name="lucid-shard-quantity"
-          class="form-control"
-        )
-    div.form-group.row
-      label.col-sm-4.col-form-label.col-form-label(for="mythril-shard-quantity") Mythril Shard
-      div.col-sm-6
-        input.form-control.formcontrol(
-          type="number"
-          id="mythril-shard-quantity"
-          name="mythril-shard-quantity"
-          class="form-control"
-        )
-    div.form-group.row
-      label.col-sm-4.col-form-label.col-form-label(for="power-shard-quantity") Power Shard
-      div.col-sm-6
-        input.form-control.formcontrol(
-          type="number"
-          id="power-shard-quantity"
-          name="power-shard-quantity"
-          class="form-control"
-        )
-    div.form-group.row
-      label.col-sm-4.col-form-label.col-form-label(for="spirit-shard-quantity") Spirit Shard
-      div.col-sm-6
-        input.form-control.formcontrol(
-          type="number"
-          id="spirit-shard-quantity"
-          name="spirit-shard-quantity"
-          class="form-control"
-        )
-    div.form-group.row
-      label.col-sm-4.col-form-label.col-form-label(for="thunder-shard-quantity") Thunder Shard
-      div.col-sm-6
-        input.form-control.formcontrol(
-          type="number"
-          id="thunder-shard-quantity"
-          name="thunder-shard-quantity"
-          class="form-control"
-        )
+    +stock-item('Blaze Shard', 'blazeShard')
+    +stock-item('Bright Shard', 'brightShard')
+    +stock-item('Frost Shard', 'frostShard')
+    +stock-item('Lucid Shard', 'lucidShard')
+    +stock-item('Mythril Shard', 'mythrilShard')
+    +stock-item('Power Shard', 'powerShard')
+    +stock-item('Spirit Shard', 'spiritShard')
+    +stock-item('Thunder Shard', 'thunderShard')
     h3 Gems
-    div.form-group.row
-      label.col-sm-4.col-form-label.col-form-label(for="blaze-gem-quantity") Blaze Gem
-      div.col-sm-6
-        input.form-control.formcontrol(
-          type="number"
-          id="blaze-gem-quantity"
-          name="blaze-gem-quantity"
-          class="form-control"
-        )
+    +stock-item('Blaze Gem', 'blazeGem')
+    +stock-item('Bright Gem', 'brightGem')
+    +stock-item('Frost Gem', 'frostGem')
+    +stock-item('Lucid Gem', 'lucidGem')
+    +stock-item('Power Gem', 'powerGem')
+    +stock-item('Spirit Gem', 'spiritGem')
+    +stock-item('Thunder Gem', 'thunderGem')
